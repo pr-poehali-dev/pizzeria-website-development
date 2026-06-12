@@ -432,9 +432,9 @@ export default function Index() {
           <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <div className="space-y-6">
               {[
-                { icon: "MapPin", label: "Адрес", val: "ул. Итальянская, 14, Москва" },
-                { icon: "Phone", label: "Телефон", val: "+7 (495) 123-45-67" },
-                { icon: "Mail", label: "Email", val: "hello@lafornace.ru" },
+                { icon: "MapPin", label: "Адрес", val: "Боровское шоссе, 27 корп. 1" },
+                { icon: "Phone", label: "Телефон", val: "+7 (993) 259-01-43" },
+                { icon: "Mail", label: "Email", val: "hello@adanapizza.ru" },
                 { icon: "Clock", label: "Режим работы", val: "Ежедневно 11:00 — 23:00" },
               ].map((c) => (
                 <div key={c.label} className="flex items-start gap-4 p-5 bg-card rounded-2xl border border-border">
@@ -467,7 +467,7 @@ export default function Index() {
               <div className="text-center p-8">
                 <Icon name="MapPin" size={40} className="text-primary mx-auto mb-4" />
                 <p className="font-display text-xl text-foreground/60">Карта будет здесь</p>
-                <p className="font-body text-sm text-muted-foreground mt-2">ул. Итальянская, 14</p>
+                <p className="font-body text-sm text-muted-foreground mt-2">Боровское шоссе, 27 корп. 1</p>
               </div>
             </div>
           </div>
