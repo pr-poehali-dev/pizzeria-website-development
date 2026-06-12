@@ -7,26 +7,9 @@ const CHEF_IMG = "https://cdn.poehali.dev/projects/cb33b451-463e-437b-bd04-33127
 
 const MENU = [
   {
-    category: "Классика",
+    category: "Наше меню",
     items: [
-      { name: "Маргарита", desc: "Томатный соус, моцарелла, свежий базилик", price: "590 ₽", tag: "Хит" },
-      { name: "Пеппероне", desc: "Томатный соус, моцарелла, пепперони, орегано", price: "720 ₽", tag: "" },
-      { name: "Четыре сыра", desc: "Моцарелла, горгонзола, пармезан, рикотта", price: "790 ₽", tag: "" },
-    ],
-  },
-  {
-    category: "Фирменные",
-    items: [
-      { name: "Фирменная", desc: "Рикотта, прошутто, руккола, вяленые томаты", price: "890 ₽", tag: "Шеф" },
-      { name: "Тартюфо", desc: "Белый соус, грибы, трюфельное масло, пармезан", price: "950 ₽", tag: "" },
-      { name: "Дьяволо", desc: "Острая салями, чили, моцарелла, томаты", price: "820 ₽", tag: "Острая" },
-    ],
-  },
-  {
-    category: "Вегетарианские",
-    items: [
-      { name: "Примавера", desc: "Томаты, цукини, баклажан, болгарский перец, моцарелла", price: "750 ₽", tag: "" },
-      { name: "Бьянка", desc: "Белый соус, шпинат, рикотта, кедровые орехи", price: "730 ₽", tag: "" },
+      { name: "Пепперони", desc: "Томатный соус, моцарелла, пепперони, орегано", price: "590 ₽", tag: "Хит" },
     ],
   },
 ];
@@ -160,9 +143,9 @@ export default function Index() {
               className="font-display text-6xl md:text-8xl font-bold text-white leading-none mb-6 opacity-0 animate-fade-up"
               style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
             >
-              Тепло<br />
-              <em className="text-amber-300">Италии</em><br />
-              у вас дома
+              Вкус,<br />
+              <em className="text-amber-300">который</em><br />
+              остаётся
             </h1>
             <p
               className="font-body text-white/80 text-lg mb-10 leading-relaxed max-w-md opacity-0 animate-fade-up"
