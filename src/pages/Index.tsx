@@ -196,7 +196,7 @@ export default function Index() {
           style={{ animationDelay: "1s", animationFillMode: "forwards" }}
         >
           <div className="flex gap-8 bg-white/10 backdrop-blur border border-white/20 rounded-2xl px-8 py-4">
-            {[["12+", "лет работы"], ["50к+", "довольных гостей"], ["30 мин", "среднее время доставки"]].map(([val, lbl]) => (
+            {[["2025", "год основания"], ["50к+", "довольных гостей"], ["30 мин", "среднее время доставки"]].map(([val, lbl]) => (
               <div key={lbl} className="text-center">
                 <div className="font-display text-2xl font-bold text-amber-300">{val}</div>
                 <div className="font-body text-white/70 text-xs mt-0.5">{lbl}</div>
@@ -283,7 +283,7 @@ export default function Index() {
               <p className="font-body text-primary text-sm tracking-[0.2em] uppercase mb-4">Наша история</p>
               <h2 className="font-display text-5xl md:text-6xl font-bold text-foreground leading-tight mb-6">
                 Готовим с душой<br />
-                <em>с 2012 года</em>
+                <em>с 2025 года</em>
               </h2>
               <div className="flex items-center gap-3 mb-6">
                 <div className="h-px bg-border flex-1 max-w-16" />
@@ -478,7 +478,7 @@ export default function Index() {
       <footer className="bg-foreground text-background py-10 border-t border-border">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="font-display text-2xl font-bold italic text-amber-400">Адана Пицца</div>
-          <p className="font-body text-sm text-background/50">© 2025 Адана Пицца. Все права защищены.</p>
+          <p className="font-body text-sm text-background/50">© 2025 Адана Пицца. Основана в 2025 году.</p>
           <div className="flex gap-5 flex-wrap justify-center">
             {NAV_ITEMS.map((n) => (
               <a key={n.label} href={n.href} className="font-body text-sm text-background/60 hover:text-amber-400 transition-colors">
