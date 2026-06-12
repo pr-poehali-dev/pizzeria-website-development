@@ -2,8 +2,8 @@ import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
 const HERO_IMG = "https://cdn.poehali.dev/projects/cb33b451-463e-437b-bd04-33127a5f21a2/files/e11e9cca-99bc-4683-b11a-c13faa6b6df4.jpg";
-const PIZZA_IMG = "https://cdn.poehali.dev/projects/cb33b451-463e-437b-bd04-33127a5f21a2/files/56b6335c-4073-4d7e-ae2e-53eaa8bef039.jpg";
-const CHEF_IMG = "https://cdn.poehali.dev/projects/cb33b451-463e-437b-bd04-33127a5f21a2/files/da919885-b840-4bd4-89af-e6c22814a85d.jpg";
+const PIZZA_IMG = "https://cdn.poehali.dev/projects/cb33b451-463e-437b-bd04-33127a5f21a2/files/9f5ebf3a-be10-4074-bf3b-bc0b3e8c4a92.jpg";
+const CHEF_IMG = "https://cdn.poehali.dev/projects/cb33b451-463e-437b-bd04-33127a5f21a2/files/470ef4a3-727e-4c4b-919e-b4781e617cfa.jpg";
 
 const MENU = [
   {
