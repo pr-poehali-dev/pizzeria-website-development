@@ -17,7 +17,7 @@ const MENU = [
   {
     category: "Фирменные",
     items: [
-      { name: "La Fornace", desc: "Рикотта, прошутто, руккола, вяленые томаты", price: "890 ₽", tag: "Шеф" },
+      { name: "Фирменная", desc: "Рикотта, прошутто, руккола, вяленые томаты", price: "890 ₽", tag: "Шеф" },
       { name: "Тартюфо", desc: "Белый соус, грибы, трюфельное масло, пармезан", price: "950 ₽", tag: "" },
       { name: "Дьяволо", desc: "Острая салями, чили, моцарелла, томаты", price: "820 ₽", tag: "Острая" },
     ],
@@ -34,7 +34,7 @@ const MENU = [
 const REVIEWS = [
   { name: "Алина М.", text: "Лучшая пицца в городе! Тесто тонкое, хрустящее — прямо как в Неаполе. Теперь заказываем каждую пятницу.", stars: 5, date: "15 мая 2025" },
   { name: "Дмитрий К.", text: "Доставка приехала за 35 минут, пицца горячая. Четыре сыра — просто шедевр. Рекомендую всем!", stars: 5, date: "3 июня 2025" },
-  { name: "Света Н.", text: "Заказывала La Fornace — вкус невероятный. Атмосфера в зале тоже очень уютная, обязательно вернёмся.", stars: 5, date: "10 июня 2025" },
+  { name: "Света Н.", text: "Заказывала Адана Пицца — вкус невероятный. Атмосфера в зале тоже очень уютная, обязательно вернёмся.", stars: 5, date: "10 июня 2025" },
   { name: "Игорь Р.", text: "Отличное соотношение цены и качества. Порции большие, всё свежее. Дети в восторге от Маргариты!", stars: 4, date: "11 июня 2025" },
 ];
 
@@ -79,7 +79,7 @@ export default function Index() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container mx-auto flex items-center justify-between h-16 px-4">
           <a href="#" className="font-display text-2xl font-bold text-primary tracking-wide italic">
-            La Fornace
+            Адана Пицца
           </a>
           <nav className="hidden md:flex items-center gap-7">
             {NAV_ITEMS.map((n) => (
@@ -142,7 +142,7 @@ export default function Index() {
       {/* HERO */}
       <section className="relative min-h-screen flex items-center overflow-hidden pt-16">
         <div className="absolute inset-0 z-0">
-          <img src={HERO_IMG} alt="La Fornace" className="w-full h-full object-cover" />
+          <img src={HERO_IMG} alt="Адана Пицца" className="w-full h-full object-cover" />
           <div
             className="absolute inset-0"
             style={{ background: "linear-gradient(105deg, hsl(20 40% 8% / 0.85) 0%, hsl(20 40% 8% / 0.5) 50%, transparent 100%)" }}
@@ -291,7 +291,7 @@ export default function Index() {
                 <div className="h-px bg-border flex-1 max-w-16" />
               </div>
               <p className="font-body text-foreground/70 text-base leading-relaxed mb-5">
-                Пиццерия La Fornace родилась из любви к настоящей итальянской кухне. Наш шеф-повар Антонио Марчезе привёз рецепты прямо из Неаполя — родины пиццы.
+                Пиццерия Адана Пицца родилась из любви к настоящей итальянской кухне. Наш шеф-повар Антонио Марчезе привёз рецепты прямо из Неаполя — родины пиццы.
               </p>
               <p className="font-body text-foreground/70 text-base leading-relaxed mb-8">
                 Каждое тесто созревает 48 часов. Томаты — сорта Сан-Марцано. Дровяная печь разогревается до 485°C. Это не просто еда — это итальянская традиция.
@@ -477,8 +477,8 @@ export default function Index() {
       {/* FOOTER */}
       <footer className="bg-foreground text-background py-10 border-t border-border">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="font-display text-2xl font-bold italic text-amber-400">La Fornace</div>
-          <p className="font-body text-sm text-background/50">© 2025 La Fornace. Все права защищены.</p>
+          <div className="font-display text-2xl font-bold italic text-amber-400">Адана Пицца</div>
+          <p className="font-body text-sm text-background/50">© 2025 Адана Пицца. Все права защищены.</p>
           <div className="flex gap-5 flex-wrap justify-center">
             {NAV_ITEMS.map((n) => (
               <a key={n.label} href={n.href} className="font-body text-sm text-background/60 hover:text-amber-400 transition-colors">
@@ -590,7 +590,7 @@ export default function Index() {
               <Icon name="X" size={20} />
             </button>
             <div className="text-center mb-6">
-              <div className="font-display text-3xl font-bold italic text-primary mb-1">La Fornace</div>
+              <div className="font-display text-3xl font-bold italic text-primary mb-1">Адана Пицца</div>
               <p className="font-body text-sm text-muted-foreground">Личный кабинет</p>
               <div className="flex gap-1 justify-center mt-4 bg-muted rounded-xl p-1">
                 {(["login", "register"] as const).map((m) => (
