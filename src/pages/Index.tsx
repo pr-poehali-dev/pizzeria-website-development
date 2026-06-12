@@ -2,7 +2,7 @@ import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
 const HERO_IMG = "https://cdn.poehali.dev/projects/cb33b451-463e-437b-bd04-33127a5f21a2/files/e11e9cca-99bc-4683-b11a-c13faa6b6df4.jpg";
-const PIZZA_IMG = "https://cdn.poehali.dev/projects/cb33b451-463e-437b-bd04-33127a5f21a2/files/9f5ebf3a-be10-4074-bf3b-bc0b3e8c4a92.jpg";
+const PIZZA_IMG = "https://cdn.poehali.dev/projects/cb33b451-463e-437b-bd04-33127a5f21a2/files/5d91a79d-2ba3-4cdb-aa0b-d44fed10ad2e.jpg";
 const CHEF_IMG = "https://cdn.poehali.dev/projects/cb33b451-463e-437b-bd04-33127a5f21a2/files/470ef4a3-727e-4c4b-919e-b4781e617cfa.jpg";
 
 const MENU = [
@@ -61,7 +61,7 @@ export default function Index() {
       {/* NAVBAR */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container mx-auto flex items-center justify-between h-16 px-4">
-          <a href="#" className="font-display text-2xl font-bold text-red-500 tracking-wide italic">
+          <a href="#" className="text-2xl font-bold text-red-500 tracking-wide" style={{ fontFamily: "'Pacifico', cursive" }}>
             Адана Пицца
           </a>
           <nav className="hidden md:flex items-center gap-7">
@@ -151,7 +151,7 @@ export default function Index() {
               className="font-body text-white/80 text-lg mb-10 leading-relaxed max-w-md opacity-0 animate-fade-up"
               style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
             >
-              Тонкое тесто, дровяная печь, свежие ингредиенты — рецепты из Неаполя, доставленные прямо к вашей двери.
+              Свежие ингредиенты, качественное тесто и любовь к каждому заказу — это Адана Пицца. Доставим горячей прямо к вам.
             </p>
             <div
               className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up"
@@ -259,46 +259,52 @@ export default function Index() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="py-24 bg-card border-y border-border">
+      <section id="about" className="py-24 bg-foreground border-y border-border overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="font-body text-primary text-sm tracking-[0.2em] uppercase mb-4">Наша история</p>
-              <h2 className="font-display text-5xl md:text-6xl font-bold text-foreground leading-tight mb-6">
-                Готовим с душой<br />
-                <em>с 2025 года</em>
-              </h2>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="h-px bg-border flex-1 max-w-16" />
-                <span className="font-display text-amber-500 text-lg tracking-widest">✦</span>
-                <div className="h-px bg-border flex-1 max-w-16" />
-              </div>
-              <p className="font-body text-foreground/70 text-base leading-relaxed mb-5">
-                Адана Пицца — это пиццерия, созданная в 2025 году с любовью к настоящей пицце. Мы готовим из свежих ингредиентов и делаем каждый заказ с душой.
-              </p>
-              <p className="font-body text-foreground/70 text-base leading-relaxed mb-8">
-                Только качественные продукты и свежие ингредиенты — наш принцип с первого дня. Мы рады каждому гостю и стараемся, чтобы каждый кусочек был вкусным.
-              </p>
-              <div className="grid grid-cols-3 gap-4">
-                {[
-                  { icon: "Star", label: "Качество", val: "Высшее" },
-                  { icon: "Clock", label: "Режим работы", val: "10–23" },
-                  { icon: "Leaf", label: "Только свежее", val: "Ежедневно" },
-                ].map((f) => (
-                  <div key={f.label} className="text-center p-4 bg-background rounded-xl border border-border">
-                    <Icon name={f.icon} size={22} className="mx-auto text-primary mb-2" />
-                    <div className="font-display text-lg font-bold text-foreground">{f.val}</div>
-                    <div className="font-body text-xs text-muted-foreground mt-0.5">{f.label}</div>
-                  </div>
-                ))}
-              </div>
+          <div className="text-center mb-14">
+            <p className="font-body text-primary text-sm tracking-[0.2em] uppercase mb-3">Наша история</p>
+            <h2 className="font-display text-5xl md:text-6xl font-bold text-background leading-tight mb-4">
+              Готовим с душой
+            </h2>
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="h-px bg-background/20 flex-1 max-w-16" />
+              <span className="text-red-500 text-lg tracking-widest">✦</span>
+              <div className="h-px bg-background/20 flex-1 max-w-16" />
             </div>
-            <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img src={CHEF_IMG} alt="Наш шеф-повар" className="w-full h-[500px] object-cover" />
-              </div>
+            <p className="font-body text-background/70 text-base leading-relaxed max-w-xl mx-auto">
+              Адана Пицца — это пиццерия, созданная в 2025 году с любовью к настоящей пицце. Только свежие ингредиенты и качество в каждом кусочке.
+            </p>
+          </div>
 
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-14">
+            {[
+              { val: "2025", label: "Год основания", icon: "CalendarDays" },
+              { val: "50+", label: "Видов пицц", icon: "Pizza" },
+              { val: "30 мин", label: "Доставка", icon: "Truck" },
+              { val: "10–23", label: "Режим работы", icon: "Clock" },
+            ].map((s) => (
+              <div key={s.label} className="bg-background/5 border border-background/10 rounded-2xl p-6 text-center hover:bg-background/10 transition-colors">
+                <Icon name={s.icon} size={28} className="text-red-500 mx-auto mb-3" />
+                <div className="font-display text-3xl font-bold text-background mb-1">{s.val}</div>
+                <div className="font-body text-sm text-background/60">{s.label}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { icon: "Heart", title: "С душой", desc: "Каждая пицца — это наша забота о вас. Делаем вкусно, как для себя." },
+              { icon: "ShieldCheck", title: "Качество", desc: "Только свежие продукты. Никаких компромиссов с качеством ингредиентов." },
+              { icon: "Smile", title: "Для всех", desc: "Рады каждому гостю — семьям, компаниям и одиноким ценителям пиццы." },
+            ].map((c) => (
+              <div key={c.title} className="bg-background/5 border border-background/10 rounded-2xl p-7 hover:bg-background/10 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center mb-4">
+                  <Icon name={c.icon} size={22} className="text-red-500" />
+                </div>
+                <h3 className="font-display text-2xl font-bold text-background mb-2">{c.title}</h3>
+                <p className="font-body text-background/60 text-sm leading-relaxed">{c.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -460,7 +466,7 @@ export default function Index() {
       {/* FOOTER */}
       <footer className="bg-foreground text-background py-10 border-t border-border">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="font-display text-2xl font-bold italic text-red-500">Адана Пицца</div>
+          <div className="text-2xl font-bold text-red-500" style={{ fontFamily: "'Pacifico', cursive" }}>Адана Пицца</div>
           <p className="font-body text-sm text-background/50">© 2025 Адана Пицца. Основана в 2025 году.</p>
           <div className="flex gap-5 flex-wrap justify-center">
             {NAV_ITEMS.map((n) => (
@@ -573,7 +579,7 @@ export default function Index() {
               <Icon name="X" size={20} />
             </button>
             <div className="text-center mb-6">
-              <div className="font-display text-3xl font-bold italic text-red-500 mb-1">Адана Пицца</div>
+              <div className="text-3xl font-bold text-red-500 mb-1" style={{ fontFamily: "'Pacifico', cursive" }}>Адана Пицца</div>
               <p className="font-body text-sm text-muted-foreground">Личный кабинет</p>
               <div className="flex gap-1 justify-center mt-4 bg-muted rounded-xl p-1">
                 {(["login", "register"] as const).map((m) => (
