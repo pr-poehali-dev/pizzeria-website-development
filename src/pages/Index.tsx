@@ -78,7 +78,7 @@ export default function Index() {
       {/* NAVBAR */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container mx-auto flex items-center justify-between h-16 px-4">
-          <a href="#" className="font-display text-2xl font-bold text-primary tracking-wide italic">
+          <a href="#" className="font-display text-2xl font-bold text-red-500 tracking-wide italic">
             Адана Пицца
           </a>
           <nav className="hidden md:flex items-center gap-7">
@@ -477,7 +477,7 @@ export default function Index() {
       {/* FOOTER */}
       <footer className="bg-foreground text-background py-10 border-t border-border">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="font-display text-2xl font-bold italic text-amber-400">Адана Пицца</div>
+          <div className="font-display text-2xl font-bold italic text-red-500">Адана Пицца</div>
           <p className="font-body text-sm text-background/50">© 2025 Адана Пицца. Основана в 2025 году.</p>
           <div className="flex gap-5 flex-wrap justify-center">
             {NAV_ITEMS.map((n) => (
@@ -590,7 +590,7 @@ export default function Index() {
               <Icon name="X" size={20} />
             </button>
             <div className="text-center mb-6">
-              <div className="font-display text-3xl font-bold italic text-primary mb-1">Адана Пицца</div>
+              <div className="font-display text-3xl font-bold italic text-red-500 mb-1">Адана Пицца</div>
               <p className="font-body text-sm text-muted-foreground">Личный кабинет</p>
               <div className="flex gap-1 justify-center mt-4 bg-muted rounded-xl p-1">
                 {(["login", "register"] as const).map((m) => (
