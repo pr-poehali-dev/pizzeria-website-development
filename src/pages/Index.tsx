@@ -460,12 +460,15 @@ export default function Index() {
                 ))}
               </div>
             </div>
-            <div className="bg-card rounded-3xl border border-border overflow-hidden h-64 lg:h-auto flex items-center justify-center">
-              <div className="text-center p-8">
-                <Icon name="MapPin" size={40} className="text-primary mx-auto mb-4" />
-                <p className="font-display text-xl text-foreground/60">Карта будет здесь</p>
-                <p className="font-body text-sm text-muted-foreground mt-2">Боровское шоссе, 27 корп. 1</p>
-              </div>
+            <div className="bg-card rounded-3xl border border-border overflow-hidden h-64 lg:h-[420px]">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=37.373500%2C55.650000&z=16&pt=37.373500,55.650000,pm2rdm&text=%D0%91%D0%BE%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5+%D1%88%D0%BE%D1%81%D1%81%D0%B5+27+%D0%BA%D0%BE%D1%80%D0%BF+1"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                title="Адана Пицца на карте"
+              />
             </div>
           </div>
         </div>
