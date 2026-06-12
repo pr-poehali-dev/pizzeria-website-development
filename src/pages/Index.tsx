@@ -314,10 +314,7 @@ export default function Index() {
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img src={CHEF_IMG} alt="Наш шеф-повар" className="w-full h-[500px] object-cover" />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-2xl shadow-xl max-w-xs hidden lg:block">
-                <p className="font-display text-xl italic font-semibold">"Настоящая пицца — это страсть в каждом жесте"</p>
-                <p className="font-body text-sm mt-2 text-primary-foreground/80">— Антонио Марчезе, шеф-повар</p>
-              </div>
+
             </div>
           </div>
         </div>
