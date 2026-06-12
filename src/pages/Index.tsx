@@ -7,9 +7,55 @@ const CHEF_IMG = "https://cdn.poehali.dev/projects/cb33b451-463e-437b-bd04-33127
 
 const MENU = [
   {
-    category: "Наше меню",
+    category: "Классика",
     items: [
-      { name: "Пепперони", desc: "Томатный соус, моцарелла, пепперони, орегано", price: "590 ₽", tag: "Хит" },
+      { name: "Пепперони", desc: "Соус томатный, сыр моцарелла, пепперони, сыр пармезан", sizes: { s: "469 ₽", m: "809 ₽", l: "999 ₽" }, tag: "Хит" },
+      { name: "Маргарита", desc: "Соус томатный, сыр моцарелла, сыр пармезан, томаты черри, итальянские травы", sizes: { s: "649 ₽", m: "799 ₽", l: "899 ₽" }, tag: "" },
+      { name: "Куриная Барбекю", desc: "Соус томатный, сыр моцарелла", sizes: { s: "479 ₽", m: "639 ₽", l: "819 ₽" }, tag: "" },
+      { name: "Ветчина и Грибы", desc: "Соус томатный, сыр моцарелла, грибы, ветчина", sizes: { s: "479 ₽", m: "659 ₽", l: "949 ₽" }, tag: "" },
+      { name: "Четыре сезона", desc: "Соус Альфредо, сыр моцарелла, куриное филе, томаты черри, салат айсберг, соус Цезарь, сыр пармезан", sizes: { s: "889 ₽", m: "989 ₽", l: "" }, tag: "" },
+    ],
+  },
+  {
+    category: "Фирменные",
+    items: [
+      { name: "Карбонара", desc: "Соус альфредо, сыр моцарелла, бекон, пармезан, яичный желток, лук красный, петрушка", sizes: { s: "679 ₽", m: "979 ₽", l: "1159 ₽" }, tag: "NEW" },
+      { name: "Адана Пицца", desc: "Соус томатный, сыр моцарелла, лук красный, колбаски острая, пепперони, грибы, томаты черри, соус Шираза, жареный лук, соус Адана", sizes: { s: "839 ₽", m: "949 ₽", l: "1149 ₽" }, tag: "Фирменная" },
+      { name: "Пять Сыров", desc: "Ветчина, охотничьи колбаски, бекон, говядина, сыр моцарелла, сыр чеддер, пармезан, соус Бешамель, перец молотый", sizes: { s: "679 ₽", m: "979 ₽", l: "1049 ₽" }, tag: "" },
+      { name: "Премьер", desc: "Соус томатный, сыр моцарелла, пепперони, ветчина, бекон, сыр пармезан, жареный лук", sizes: { s: "649 ₽", m: "839 ₽", l: "1009 ₽" }, tag: "" },
+      { name: "Гавайская Делюкс", desc: "Фирменный томатный соус, Альфредо, сыр моцарелла, ветчина, куриное филе, ананас", sizes: { s: "629 ₽", m: "809 ₽", l: "919 ₽" }, tag: "" },
+    ],
+  },
+  {
+    category: "Мясные",
+    items: [
+      { name: "Четыре мяса", desc: "Ветчина, охотничьи колбаски, бекон, говядина, сыр моцарелла, фирменный томатный соус, перец молотый", sizes: { s: "729 ₽", m: "889 ₽", l: "1019 ₽" }, tag: "" },
+      { name: "Мясной микс", desc: "Соус томатный, сыр моцарелла, пепперони, бекон, свинина, колбаски, ветчина", sizes: { s: "799 ₽", m: "939 ₽", l: "1169 ₽" }, tag: "" },
+      { name: "Мясная Барбекю", desc: "Соус томатный, сыр моцарелла, колбаски охотничьи, свинина, бекон, говядина, сыр чеддер, соус барбекю", sizes: { s: "719 ₽", m: "919 ₽", l: "1019 ₽" }, tag: "" },
+      { name: "Донация", desc: "Соус сливочный, сыр моцарелла, бекон, ветчина, томаты черри, перец сладкий, тесто", sizes: { s: "629 ₽", m: "809 ₽", l: "919 ₽" }, tag: "" },
+      { name: "Дабл Пепперони Халапь", desc: "Соус томатный, сыр моцарелла, пепперони, сыр чеддер, томатные чипсы", sizes: { s: "469 ₽", m: "849 ₽", l: "1019 ₽" }, tag: "" },
+    ],
+  },
+  {
+    category: "Особые",
+    items: [
+      { name: "Жюльен", desc: "Соус грибной, сыр моцарелла, грибы, лук красный, куриное филе, сыр пармезан, жареный лук", sizes: { s: "739 ₽", m: "909 ₽", l: "1019 ₽" }, tag: "" },
+      { name: "Мексиканская острая", desc: "Соус медовая, пепперони, говядина, перец сладкий, перец Халапеньо, сыр чеддер, фирменный острый соус", sizes: { s: "739 ₽", m: "859 ₽", l: "1109 ₽" }, tag: "" },
+      { name: "Курочка Барбекю", desc: "Соус томатный, соус барбекю, сыр моцарелла, говядина, лук красный, грибы, перед халапеньо", sizes: { s: "629 ₽", m: "819 ₽", l: "979 ₽" }, tag: "" },
+      { name: "Баварская", desc: "Соус томатный, сыр моцарелла, колбаски охотничьи, лук красный, огурцы маринованные, томаты черри, соус медово-горчичный", sizes: { s: "739 ₽", m: "889 ₽", l: "1159 ₽" }, tag: "" },
+      { name: "Цезарь", desc: "Соус Альфредо, сыр моцарелла, куриное филе, томаты черри, салат айсберг, соус Цезарь, сыр пармезан", sizes: { s: "609 ₽", m: "869 ₽", l: "1089 ₽" }, tag: "" },
+    ],
+  },
+  {
+    category: "Другие",
+    items: [
+      { name: "Лесные грибы", desc: "Соус Альфредо, сыр моцарелла, шампиньоны, лисички, опята, лук красный, сыр пармезан", sizes: { s: "629 ₽", m: "849 ₽", l: "995 ₽" }, tag: "" },
+      { name: "Ветчина и сыр", desc: "Соус Альфредо, сыр моцарелла, ветчина, сыр пармезан, сыр чеддер", sizes: { s: "599 ₽", m: "729 ₽", l: "889 ₽" }, tag: "" },
+      { name: "Морская", desc: "Соус Альфредо, сыр моцарелла, креветки, лосось, мидии, кальмары, томаты свежие, каперсы, салат рукола", sizes: { s: "759 ₽", m: "999 ₽", l: "1249 ₽" }, tag: "" },
+      { name: "Сырная", desc: "Соус Альфредо, сыр моцарелла, пармезан, чеддер, итальянские травы", sizes: { s: "839 ₽", m: "849 ₽", l: "1169 ₽" }, tag: "" },
+      { name: "Вегетарианская", desc: "Соус томатный, сыр моцарелла, перец сладкий, томаты свежие, маслины, фета, итальянские травы", sizes: { s: "629 ₽", m: "839 ₽", l: "949 ₽" }, tag: "" },
+      { name: "Дабл Пепперони", desc: "Соус томатный, сыр моцарелла, пепперони, пармезан", sizes: { s: "469 ₽", m: "899 ₽", l: "1109 ₽" }, tag: "" },
+      { name: "Пепперони Халапь", desc: "Соус томатный, сыр моцарелла, пепперони", sizes: { s: "449 ₽", m: "799 ₽", l: "990 ₽" }, tag: "" },
     ],
   },
 ];
@@ -32,6 +78,7 @@ const NAV_ITEMS = [
 export default function Index() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("Классика");
+  const [selectedSizes, setSelectedSizes] = useState<Record<string, "s" | "m" | "l">>({});
   const [cart, setCart] = useState<{ name: string; price: string }[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
   const [orderForm, setOrderForm] = useState({ name: "", phone: "", address: "" });
@@ -220,40 +267,60 @@ export default function Index() {
             ))}
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {activeItems.map((item) => (
-              <div
-                key={item.name}
-                className="group bg-card rounded-2xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-              >
-                <div className="aspect-video relative overflow-hidden">
-                  <img
-                    src={PIZZA_IMG}
-                    alt={item.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  {item.tag && (
-                    <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-xs font-body font-semibold px-3 py-1 rounded-full">
-                      {item.tag}
-                    </span>
-                  )}
-                </div>
-                <div className="p-5">
-                  <h3 className="font-display text-2xl font-semibold text-foreground mb-1">{item.name}</h3>
-                  <p className="font-body text-muted-foreground text-sm mb-4 leading-relaxed">{item.desc}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="font-display text-2xl font-bold text-primary">{item.price}</span>
-                    <button
-                      onClick={() => addToCart(item)}
-                      className="flex items-center gap-1.5 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-body font-medium hover:bg-primary/90 transition-colors"
-                    >
-                      <Icon name="Plus" size={14} />
-                      В корзину
-                    </button>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {activeItems.map((item) => {
+              const size = selectedSizes[item.name] || "m";
+              const price = item.sizes[size] || item.sizes.m || item.sizes.s;
+              const sizeLabels: Record<string, string> = { s: "24 см", m: "33 см", l: "36 см" };
+              return (
+                <div
+                  key={item.name}
+                  className="group bg-card rounded-2xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                >
+                  <div className="aspect-video relative overflow-hidden">
+                    <img
+                      src={PIZZA_IMG}
+                      alt={item.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    {item.tag && (
+                      <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-xs font-body font-semibold px-3 py-1 rounded-full">
+                        {item.tag}
+                      </span>
+                    )}
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-display text-xl font-semibold text-foreground mb-1">{item.name}</h3>
+                    <p className="font-body text-muted-foreground text-xs mb-3 leading-relaxed">{item.desc}</p>
+                    <div className="flex gap-1.5 mb-4">
+                      {(["s", "m", "l"] as const).map((s) => item.sizes[s] ? (
+                        <button
+                          key={s}
+                          onClick={() => setSelectedSizes(prev => ({ ...prev, [item.name]: s }))}
+                          className={`flex-1 py-1.5 rounded-lg text-xs font-body font-medium border transition-all ${
+                            size === s
+                              ? "bg-primary text-primary-foreground border-primary"
+                              : "border-border text-muted-foreground hover:border-primary"
+                          }`}
+                        >
+                          {sizeLabels[s]}
+                        </button>
+                      ) : null)}
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="font-display text-2xl font-bold text-primary">{price}</span>
+                      <button
+                        onClick={() => addToCart({ name: `${item.name} (${sizeLabels[size]})`, price: price })}
+                        className="flex items-center gap-1.5 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-body font-medium hover:bg-primary/90 transition-colors"
+                      >
+                        <Icon name="Plus" size={14} />
+                        В корзину
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
