@@ -434,7 +434,7 @@ export default function Index() {
               {[
                 { icon: "MapPin", label: "Адрес", val: "Боровское шоссе, 27 корп. 1" },
                 { icon: "Phone", label: "Телефон", val: "+7 (993) 259-01-43" },
-                { icon: "Mail", label: "Email", val: "hello@adanapizza.ru" },
+                { icon: "Mail", label: "Email", val: "adana0611@mail.ru" },
                 { icon: "Clock", label: "Режим работы", val: "Ежедневно 11:00 — 23:00" },
               ].map((c) => (
                 <div key={c.label} className="flex items-start gap-4 p-5 bg-card rounded-2xl border border-border">
